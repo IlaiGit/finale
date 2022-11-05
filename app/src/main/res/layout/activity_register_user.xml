@@ -122,4 +122,5 @@
         android:onClick="Back_to_login"
         android:text="Back to login page"
         android:textStyle="bold" />
+
 </LinearLayout>

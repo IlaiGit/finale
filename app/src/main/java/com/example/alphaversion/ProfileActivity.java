@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,6 +19,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+/**
+ @author Ilai Shimoni ilaishimoni@gmail.com
+ @version 1.0
+ @since 3/11/22
+this activity shows information about signed-in user and shows details
+ */
+
 public class ProfileActivity extends AppCompatActivity {
 
     private FirebaseUser user;
@@ -28,6 +37,14 @@ public class ProfileActivity extends AppCompatActivity {
     TextView AgeAfterLog;
     TextView EmailAfterLog;
     TextView PasswordAfterLog;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+
+        // Inflate the menu;
+        getMenuInflater().inflate(R.menu.optionsmenu, menu);
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,5 +92,13 @@ public class ProfileActivity extends AppCompatActivity {
     public void Logout(View view) {
         FirebaseAuth.getInstance().signOut();
         startActivity(new Intent(ProfileActivity.this, MainActivity.class));
+    }
+
+    public void auth(MenuItem item) {
+        startActivity(new Intent(ProfileActivity.this, MainActivity.class));
+    }
+
+    public void storage(MenuItem item) {
+        startActivity(new Intent(ProfileActivity.this, ast_for_storage.class));
     }
 }

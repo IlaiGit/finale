@@ -3,8 +3,11 @@ package com.example.alphaversion;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -14,12 +17,27 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
+/**
+ @author Ilai Shimoni ilaishimoni@gmail.com
+ @version 1.0
+ @since 3/11/22
+in this activity email of an existing account is being stored and accordingly an email is sent with password recovery option
+ */
+
 public class ForgotPassword extends AppCompatActivity {
 
     EditText recoveryMail;
     ProgressBar progressBar;
 
     FirebaseAuth auth;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+
+        // Inflate the menu;
+        getMenuInflater().inflate(R.menu.optionsmenu, menu);
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,5 +76,17 @@ public class ForgotPassword extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    public void auth(MenuItem item) {
+        startActivity(new Intent(ForgotPassword.this, MainActivity.class));
+    }
+
+    public void storage(MenuItem item) {
+        startActivity(new Intent(ForgotPassword.this, ast_for_storage.class));
+    }
+
+    public void back_to_login(View view) {
+        startActivity(new Intent(ForgotPassword.this, MainActivity.class));
     }
 }

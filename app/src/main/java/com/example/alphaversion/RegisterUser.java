@@ -7,8 +7,9 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -18,6 +19,13 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
+
+/**
+ @author Ilai Shimoni ilaishimoni@gmail.com
+ @version 1.0
+ @since 3/11/22
+this code gets information from the user and stores it in variables, it uses the data dnd creates and account using the information given
+ */
 
 public class RegisterUser extends AppCompatActivity {
 
@@ -29,7 +37,13 @@ public class RegisterUser extends AppCompatActivity {
     EditText Password_signup;
     ProgressBar prog_reg;
 
-    Intent RegisterUser;
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+
+        // Inflate the menu;
+        getMenuInflater().inflate(R.menu.optionsmenu, menu);
+        return true;
+    }
 
 
     @SuppressLint("MissingInflatedId")
@@ -98,7 +112,7 @@ public class RegisterUser extends AppCompatActivity {
                                              }
                                          });
                              }else{
-                                 Toast.makeText(RegisterUser.this, "Failed to register", Toast.LENGTH_LONG).show();
+                                 Toast.makeText(RegisterUser.this, "Failed to register, email might be connected to an account already", Toast.LENGTH_LONG).show();
                                  prog_reg.setVisibility(View.GONE);
                              }
                          }
@@ -115,5 +129,14 @@ public class RegisterUser extends AppCompatActivity {
         Email_signup.setText("");
         Password_signup.setText("");
         startActivity(new Intent(RegisterUser.this, MainActivity.class));
+    }
+
+    public void auth(MenuItem item) {
+        startActivity(new Intent(RegisterUser.this, MainActivity.class));
+    }
+
+    public void storage(MenuItem item) {
+        startActivity(new Intent(RegisterUser.this, ast_for_storage.class));
+
     }
 }

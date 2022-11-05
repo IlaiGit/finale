@@ -3,8 +3,9 @@ package com.example.alphaversion;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -18,14 +19,29 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+/**
+ @author Ilai Shimoni ilaishimoni@gmail.com
+ @version 1.0
+ @since 3/11/22
+this activity enables the option to log into the account, recover passowrd or create a new account
+ */
+
 public class MainActivity extends AppCompatActivity {
     Intent MainActivity;
 
     EditText Email_login;
     EditText Password_login;
 
-    private FirebaseAuth myAuth;
+    FirebaseAuth myAuth;
     ProgressBar prog_sign;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+
+        // Inflate the menu;
+        getMenuInflater().inflate(R.menu.optionsmenu, menu);
+        return true;
+    }
 
 
     @Override
@@ -38,10 +54,6 @@ public class MainActivity extends AppCompatActivity {
         prog_sign = (ProgressBar) findViewById(R.id.prog_sign);
 
         myAuth = FirebaseAuth.getInstance();
-
-
-
-
     }
 
     public void Register_signin (View view) {
@@ -108,5 +120,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void ForgotPassword(View view) {
         startActivity(new Intent(MainActivity.this, ForgotPassword.class));
+    }
+
+    public void auth(MenuItem item) {
+        startActivity(new Intent(MainActivity.this, MainActivity.class));
+    }
+
+    public void storage(MenuItem item) {
+        startActivity(new Intent(MainActivity.this, ast_for_storage.class));
     }
 }
