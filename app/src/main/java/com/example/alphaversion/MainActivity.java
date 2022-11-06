@@ -35,14 +35,6 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth myAuth;
     ProgressBar prog_sign;
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-
-        // Inflate the menu;
-        getMenuInflater().inflate(R.menu.optionsmenu, menu);
-        return true;
-    }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,5 +120,22 @@ public class MainActivity extends AppCompatActivity {
 
     public void storage(MenuItem item) {
         startActivity(new Intent(MainActivity.this, ast_for_storage.class));
+    }
+
+    public void again(View view) {
+        startActivity(new Intent(MainActivity.this, chnage_by_color.class));
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        // Inflate the menu;
+        getMenuInflater().inflate(R.menu.optionsmenu, menu);
+        return true;
+    }
+
+    public void color(MenuItem item) {
+        startActivity(new Intent(MainActivity.this, chnage_by_color.class));
+
     }
 }

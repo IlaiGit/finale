@@ -9,4 +9,8 @@
         android:id="@+id/FirebaseStorage"
         android:onClick="storage"
         android:title="Firebase storage" />
+    <item
+        android:id="@+id/color"
+        android:onClick="color"
+        android:title="color" />
 </menu>

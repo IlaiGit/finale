@@ -54,6 +54,7 @@ dependencies {
 
     // fb storage dependencies
     implementation 'com.google.firebase:firebase-storage:20.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
 
 
     testImplementation 'junit:junit:4.13.2'

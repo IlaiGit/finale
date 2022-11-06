@@ -157,6 +157,7 @@ public class ast_for_storage extends AppCompatActivity {
 
 
                             Task<Uri> urlTask = taskSnapshot.getStorage().getDownloadUrl();
+
                             while (!urlTask.isSuccessful());
                             Uri downloadUrl = urlTask.getResult();
 
@@ -165,6 +166,8 @@ public class ast_for_storage extends AppCompatActivity {
 
                             String uploadId = mDatabaseRef.push().getKey();
                             mDatabaseRef.child(uploadId).setValue(upload);
+
+
 
 
                             /*
@@ -193,5 +196,13 @@ public class ast_for_storage extends AppCompatActivity {
         } else {
             Toast.makeText(this, "No File Selected", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void color(MenuItem item) {
+        startActivity(new Intent(ast_for_storage.this, chnage_by_color.class));
+    }
+
+    public void slideshow(View view) {
+        startActivity(new Intent(ast_for_storage.this, slideShow.class));
     }
 }

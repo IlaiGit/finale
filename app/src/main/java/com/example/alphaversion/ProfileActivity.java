@@ -101,4 +101,13 @@ public class ProfileActivity extends AppCompatActivity {
     public void storage(MenuItem item) {
         startActivity(new Intent(ProfileActivity.this, ast_for_storage.class));
     }
+
+    public void change(MenuItem item) {
+        startActivity(new Intent(ProfileActivity.this, chnage_by_color.class));
+    }
+
+    public void color(MenuItem item) {
+        startActivity(new Intent(ProfileActivity.this, chnage_by_color.class));
+
+    }
 }

@@ -89,4 +89,13 @@ public class ForgotPassword extends AppCompatActivity {
     public void back_to_login(View view) {
         startActivity(new Intent(ForgotPassword.this, MainActivity.class));
     }
+
+    public void change(MenuItem item) {
+        startActivity(new Intent(ForgotPassword.this, chnage_by_color.class));
+    }
+
+    public void color(MenuItem item) {
+        startActivity(new Intent(ForgotPassword.this, chnage_by_color.class));
+
+    }
 }

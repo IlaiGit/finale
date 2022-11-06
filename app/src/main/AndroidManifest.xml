@@ -15,6 +15,21 @@
         android:theme="@style/Theme.AlphaVersion"
         tools:targetApi="31">
         <activity
+            android:name=".slideShow"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".chnage_by_color"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ImagesActivity"
             android:exported="false">
             <meta-data
@@ -28,13 +43,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".FirebaseStorage"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
         <activity
             android:name=".ForgotPassword"
             android:exported="false">

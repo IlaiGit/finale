@@ -139,4 +139,8 @@ public class RegisterUser extends AppCompatActivity {
         startActivity(new Intent(RegisterUser.this, ast_for_storage.class));
 
     }
+
+    public void color(MenuItem item) {
+        startActivity(new Intent(RegisterUser.this, chnage_by_color.class));
+    }
 }
