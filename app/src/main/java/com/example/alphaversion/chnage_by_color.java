@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -87,5 +88,10 @@ public class chnage_by_color extends AppCompatActivity implements AdapterView.On
         String[] split = RAL.split(" ");
 
         RL.setBackgroundColor(Color.parseColor(split[1]));
+    }
+
+    public void notification(MenuItem item) {
+        startActivity(new Intent(chnage_by_color.this, not.class));
+
     }
 }

@@ -92,7 +92,8 @@ public class MainActivity extends AppCompatActivity {
                                                 @Override
                                                 public void onComplete(@NonNull Task<Void> task) {
                                                     if(task.isSuccessful()){
-                                                        Toast.makeText(MainActivity.this, "Email sent", Toast.LENGTH_LONG).show();
+                                                        Toast.makeText(MainActivity.this, "Email sent to verify account", Toast.LENGTH_LONG).show();
+                                                        prog_sign.setVisibility(View.GONE);
 
                                                     }
                                                 }
@@ -136,6 +137,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void color(MenuItem item) {
         startActivity(new Intent(MainActivity.this, chnage_by_color.class));
+
+    }
+
+    public void notification(MenuItem item) {
+        startActivity(new Intent(MainActivity.this, not.class));
 
     }
 }

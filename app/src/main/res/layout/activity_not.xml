@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".not">
+
+<Space
+    android:layout_width="match_parent"
+    android:layout_height="50dp" />
+
+<TextView
+    android:id="@+id/textView12"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fontFamily="casual"
+    android:gravity="center"
+    android:text="Smarqium"
+    android:textSize="48sp"
+    android:textStyle="bold" />
+
+<TextView
+    android:id="@+id/textView13"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fontFamily="casual"
+    android:gravity="center"
+    android:text="Innovative way of controling your aquarium"
+    android:textSize="24sp" />
+
+<Space
+    android:layout_width="match_parent"
+    android:layout_height="100dp" />
+
+<EditText
+    android:id="@+id/ET"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:fontFamily="casual"
+    android:gravity="center"
+    android:hint="Enter text"
+    android:inputType="textPersonName"
+    android:textColorHint="#000000"
+    android:textSize="24sp" />
+
+<Space
+    android:layout_width="match_parent"
+    android:layout_height="50dp" />
+
+<Button
+    android:id="@+id/button3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="#00BCD4"
+    android:fontFamily="casual"
+    android:onClick="notification"
+    android:text="Make notification appear"
+    android:textAllCaps="false"
+    android:textSize="24sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:id="@+id/TimeTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:text="use this button to set clock"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFEB3B"
+        android:fontFamily="casual"
+        android:onClick="pickTime"
+        android:text="Pick Time"
+        android:textAllCaps="false"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF0000"
+        android:fontFamily="casual"
+        android:onClick="setAlarm"
+        android:text="Set Alarm"
+        android:textSize="24sp" />
+</LinearLayout>

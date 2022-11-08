@@ -110,4 +110,9 @@ public class ProfileActivity extends AppCompatActivity {
         startActivity(new Intent(ProfileActivity.this, chnage_by_color.class));
 
     }
+
+    public void notification(MenuItem item) {
+        startActivity(new Intent(ProfileActivity.this, not.class));
+
+    }
 }

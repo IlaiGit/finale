@@ -13,4 +13,8 @@
         android:id="@+id/color"
         android:onClick="color"
         android:title="color" />
+
+    <item
+        android:onClick="notification"
+        android:title="notification" />
 </menu>

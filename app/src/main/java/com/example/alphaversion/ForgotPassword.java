@@ -98,4 +98,9 @@ public class ForgotPassword extends AppCompatActivity {
         startActivity(new Intent(ForgotPassword.this, chnage_by_color.class));
 
     }
+
+    public void notification(MenuItem item) {
+        startActivity(new Intent(ForgotPassword.this, not.class));
+
+    }
 }

@@ -93,11 +93,6 @@ public class ast_for_storage extends AppCompatActivity {
         openFileChooser();
     }
 
-    // actions are set as "Show uploads" button is pressed
-    public void Showupload(View view) {
-        startActivity(new Intent(ast_for_storage.this, ImagesActivity.class));
-    }
-
     // actions are set as "Upload Image" button is pressed
     public void uploadImage(View view) {
         if (mUploadTask != null && mUploadTask.isInProgress()) {
@@ -202,7 +197,11 @@ public class ast_for_storage extends AppCompatActivity {
         startActivity(new Intent(ast_for_storage.this, chnage_by_color.class));
     }
 
-    public void slideshow(View view) {
-        startActivity(new Intent(ast_for_storage.this, slideShow.class));
+    public void showupload(View view) {
+        startActivity(new Intent(ast_for_storage.this, downloadAndShow.class));
+    }
+
+    public void notification(MenuItem item) {
+        startActivity(new Intent(ast_for_storage.this, not.class));
     }
 }
