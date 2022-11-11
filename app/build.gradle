@@ -24,12 +24,6 @@ android {
         }
     }
 
-    // added for notification/show notification time based
-    buildFeatures{
-
-        viewBinding true
-    }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -52,6 +46,8 @@ dependencies {
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
 
+    // used for graph implementation
+    implementation 'com.jjoe64:graphview:4.2.2'
 
     //noinspection GradleCompatible
     implementation 'com.android.support:cardview-v7:26.1.0'

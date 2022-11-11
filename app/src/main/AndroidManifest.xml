@@ -15,6 +15,20 @@
         android:theme="@style/Theme.AlphaVersion"
         tools:targetApi="31">
         <activity
+            android:name=".simpleGraph"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".anotherNOT"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".DestinationActivity"
             android:exported="false">
             <meta-data

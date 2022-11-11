@@ -35,7 +35,7 @@ public class downloadAndShow extends AppCompatActivity {
         firebaseStorage = FirebaseStorage.getInstance();
         storageReference = firebaseStorage.getReference();
 
-        StorageReference imageRef = storageReference.child("Upload/1667939003373.png");
+        StorageReference imageRef = storageReference.child("Upload/1667951682752.jpg");
         long MAXBYTES = 1024*1024;
 
         imageRef.getBytes(MAXBYTES).addOnSuccessListener(new OnSuccessListener<byte[]>() {
@@ -55,6 +55,26 @@ public class downloadAndShow extends AppCompatActivity {
 
     public void notification(MenuItem item) {
         startActivity(new Intent(downloadAndShow.this, not.class));
+    }
+
+    public void timeToast(MenuItem item) {
+        startActivity(new Intent(downloadAndShow.this, anotherNOT.class));
+    }
+
+    public void color(MenuItem item) {
+        startActivity(new Intent(downloadAndShow.this, chnage_by_color.class));
+    }
+
+    public void storage(MenuItem item) {
+        startActivity(new Intent(downloadAndShow.this, ast_for_storage.class));
+    }
+
+    public void auth(MenuItem item) {
+        startActivity(new Intent(downloadAndShow.this, MainActivity.class));
+    }
+
+    public void Graph(MenuItem item) {
+        startActivity(new Intent(downloadAndShow.this, simpleGraph.class));
 
     }
 }

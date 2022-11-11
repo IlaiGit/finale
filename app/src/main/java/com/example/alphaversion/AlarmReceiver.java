@@ -16,20 +16,20 @@ public class AlarmReceiver extends BroadcastReceiver {
 
         Intent i = new Intent(context, DestinationActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, i, 0);
+        PendingIntent pendingIntent = PendingIntent.getActivity(context,0,i,0);
 
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, "time based alarm");
 
-        builder.setSmallIcon(R.drawable.ic_launcher_background);
-        builder.setContentTitle("Smarqium");
-        builder.setContentText("This is your daily reminder");
-        builder.setAutoCancel(true);
-        builder.setDefaults(NotificationCompat.DEFAULT_ALL);
-        builder.setPriority(NotificationCompat.PRIORITY_HIGH);
-        builder.setContentIntent(pendingIntent);
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, "my notification")
+                .setSmallIcon(R.drawable.ic_launcher_background)
+                .setContentTitle("Smarqium")
+                .setContentText("This is your daily reminder")
+                .setAutoCancel(true)
+                .setDefaults(NotificationCompat.DEFAULT_ALL)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setContentIntent(pendingIntent);
 
-        NotificationManagerCompat managerCompat = NotificationManagerCompat.from(context);
-        managerCompat.notify(123, builder.build());
 
+        NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(context);
+        notificationManagerCompat.notify(123, builder.build());
     }
 }

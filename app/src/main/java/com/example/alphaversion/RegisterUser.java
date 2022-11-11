@@ -148,4 +148,13 @@ public class RegisterUser extends AppCompatActivity {
         startActivity(new Intent(RegisterUser.this, not.class));
 
     }
+
+    public void timeToast(MenuItem item) {
+        startActivity(new Intent(RegisterUser.this, anotherNOT.class));
+    }
+
+    public void Graph(MenuItem item) {
+        startActivity(new Intent(RegisterUser.this, simpleGraph.class));
+
+    }
 }

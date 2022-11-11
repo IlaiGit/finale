@@ -8,6 +8,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -90,8 +91,32 @@ public class chnage_by_color extends AppCompatActivity implements AdapterView.On
         RL.setBackgroundColor(Color.parseColor(split[1]));
     }
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        // Inflate the menu;
+        getMenuInflater().inflate(R.menu.optionsmenu, menu);
+        return true;
+    }
+    public void color(MenuItem item) {
+        startActivity(new Intent(chnage_by_color.this, chnage_by_color.class));
+    }
     public void notification(MenuItem item) {
         startActivity(new Intent(chnage_by_color.this, not.class));
+    }
+    public void auth(MenuItem item) {
+        startActivity(new Intent(chnage_by_color.this, MainActivity.class));
+    }
 
+    public void storage(MenuItem item) {
+        startActivity(new Intent(chnage_by_color.this, ast_for_storage.class));
+    }
+
+    public void timeToast(MenuItem item) {
+        startActivity(new Intent(chnage_by_color.this, anotherNOT.class));
+    }
+
+    public void Graph(MenuItem item) {
+        startActivity(new Intent(chnage_by_color.this, simpleGraph.class));
     }
 }

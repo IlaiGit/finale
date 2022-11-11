@@ -103,4 +103,14 @@ public class ForgotPassword extends AppCompatActivity {
         startActivity(new Intent(ForgotPassword.this, not.class));
 
     }
+
+    public void timeToast(MenuItem item) {
+        startActivity(new Intent(ForgotPassword.this, anotherNOT.class));
+
+    }
+
+    public void Graph(MenuItem item) {
+        startActivity(new Intent(ForgotPassword.this, simpleGraph.class));
+
+    }
 }

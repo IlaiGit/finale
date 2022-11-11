@@ -137,11 +137,19 @@ public class MainActivity extends AppCompatActivity {
 
     public void color(MenuItem item) {
         startActivity(new Intent(MainActivity.this, chnage_by_color.class));
-
     }
 
     public void notification(MenuItem item) {
         startActivity(new Intent(MainActivity.this, not.class));
+
+    }
+
+    public void timeToast(MenuItem item) {
+        startActivity(new Intent(MainActivity.this, anotherNOT.class));
+    }
+
+    public void Graph(MenuItem item) {
+        startActivity(new Intent(MainActivity.this, simpleGraph.class));
 
     }
 }

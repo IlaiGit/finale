@@ -53,13 +53,6 @@
         android:layout_width="match_parent"
         android:layout_height="20dp" />
 
-    <ProgressBar
-        android:id="@+id/prog_reg"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone" />
-
     <EditText
         android:id="@+id/Age"
         android:layout_width="300dp"
@@ -101,6 +94,13 @@
     <Space
         android:layout_width="match_parent"
         android:layout_height="50dp" />
+
+    <ProgressBar
+        android:id="@+id/prog_reg"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
 
     <Button
         android:id="@+id/Register"

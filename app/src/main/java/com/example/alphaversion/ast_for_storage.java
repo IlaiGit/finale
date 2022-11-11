@@ -204,4 +204,13 @@ public class ast_for_storage extends AppCompatActivity {
     public void notification(MenuItem item) {
         startActivity(new Intent(ast_for_storage.this, not.class));
     }
+
+    public void timeToast(MenuItem item) {
+        startActivity(new Intent(ast_for_storage.this, anotherNOT.class));
+    }
+
+    public void Graph(MenuItem item) {
+        startActivity(new Intent(ast_for_storage.this, simpleGraph.class));
+
+    }
 }

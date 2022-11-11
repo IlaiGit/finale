@@ -115,4 +115,14 @@ public class ProfileActivity extends AppCompatActivity {
         startActivity(new Intent(ProfileActivity.this, not.class));
 
     }
+
+    public void timeToast(MenuItem item) {
+        startActivity(new Intent(ProfileActivity.this, anotherNOT.class));
+
+    }
+
+    public void Graph(MenuItem item) {
+        startActivity(new Intent(ProfileActivity.this, simpleGraph.class));
+
+    }
 }
