@@ -8,10 +8,16 @@
     android:orientation="vertical"
     tools:context=".ProfileActivity">
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
+
     <Button
         android:id="@+id/Logout"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1.25"
         android:backgroundTint="#00BCD4"
         android:fontFamily="casual"
         android:onClick="Logout"
@@ -22,12 +28,14 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
 
     <TextView
         android:id="@+id/NameAfterLog"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:fontFamily="casual"
         android:gravity="center"
         android:text="-"
@@ -36,7 +44,8 @@
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:fontFamily="casual"
         android:gravity="center"
         android:hint="Full name"
@@ -44,12 +53,14 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="30dp" />
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
 
     <TextView
         android:id="@+id/AgeAfterLog"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:fontFamily="casual"
         android:gravity="center"
         android:text="-"
@@ -58,7 +69,8 @@
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:fontFamily="casual"
         android:gravity="center"
         android:hint="Age"
@@ -66,12 +78,14 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="30dp" />
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
 
     <TextView
         android:id="@+id/EmailAfterLog"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:fontFamily="casual"
         android:gravity="center"
         android:text="-"
@@ -80,7 +94,8 @@
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:fontFamily="casual"
         android:gravity="center"
         android:hint="Email Address"
@@ -88,12 +103,14 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="30dp" />
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
 
     <TextView
         android:id="@+id/PasswordAfterLog"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:fontFamily="casual"
         android:gravity="center"
         android:text="-"
@@ -102,7 +119,8 @@
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:fontFamily="casual"
         android:gravity="center"
         android:hint="Password"
@@ -110,5 +128,6 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="30dp" />
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
 </LinearLayout>
