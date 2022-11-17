@@ -10,42 +10,48 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="0dp"
+        android:layout_weight="0.25" />
 
     <TextView
         android:id="@+id/textView19"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:fontFamily="casual"
         android:gravity="center"
         android:text="Smarqium"
         android:textSize="48sp"
         android:textStyle="bold" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="50dp" />
-
     <TextView
         android:id="@+id/textView20"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:fontFamily="casual"
-        android:gravity="center"
+        android:gravity="center|top"
         android:text="Innovative way of controling your aquarium"
         android:textSize="24sp" />
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="0dp"
+        android:layout_weight="0.25" />
 
     <TextView
         android:id="@+id/textView22"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:fontFamily="casual"
         android:gravity="center"
         android:text="Welcome back to Smarqium"
         android:textSize="48sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
 
 </LinearLayout>
